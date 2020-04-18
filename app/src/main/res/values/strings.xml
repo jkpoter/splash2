@@ -2,7 +2,7 @@
     <string name="app_name">GasValle</string>
 
     <string name="nombre">Nombre</string>
-    <string name="correoelectronico">cooreoelectronico</string>
+    <string name="correoelectronico">Correo Electronico</string>
     <string name="longitud">longitud</string>
     <string name="latitud">latitud</string>
     <string name="register">Register</string>
