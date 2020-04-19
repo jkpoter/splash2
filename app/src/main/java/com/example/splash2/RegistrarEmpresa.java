@@ -24,6 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.splash2.values.Global;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -44,21 +45,24 @@ public class RegistrarEmpresa<mapFragment> extends AppCompatActivity implements 
  private static final int PETICION_PERMISO_LOCALIZACION = 110;
 
     GoogleMap Map;
+    private static Global global = new Global();
     private EditText name;
     private EditText telefono, correo;
     private EditText latitud, longitud;
     private String Latid , Longi;
     private Button bton_regist, bton_atras;
     private ProgressBar loading;
-    private static final String URL_REGIST = "http://192.168.100.37:8090/volley/RegistrarEmpresa.php";
+
+
+    private static final String URL_REGIST = global.server+"volley/RegistrarEmpresa.php";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_empresa);
-
         loading = findViewById(R.id.loading);
+
         name = findViewById(R.id.name);
         telefono = findViewById(R.id.telefono);
         correo = findViewById(R.id.correo);
